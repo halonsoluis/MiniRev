@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A234F971C933112000C6125 /* ReviewFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A234F7B1C933112000C6125 /* ReviewFlow.storyboard */; };
+		9A234F981C933112000C6125 /* ReviewFlow.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A234F7D1C933112000C6125 /* ReviewFlow.strings */; };
+		9A234F991C933112000C6125 /* RateConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A234F801C933112000C6125 /* RateConfig.plist */; };
+		9A234F9A1C933112000C6125 /* RateDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234F811C933112000C6125 /* RateDataManager.swift */; };
+		9A234F9B1C933112000C6125 /* RateFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234F821C933112000C6125 /* RateFlowViewController.swift */; };
+		9A234F9C1C933112000C6125 /* RateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234F831C933112000C6125 /* RateHandler.swift */; };
+		9A234F9D1C933112000C6125 /* RatingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234F841C933112000C6125 /* RatingHandler.swift */; };
+		9A234FBA1C9332F0000C6125 /* MailHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234FAE1C9332F0000C6125 /* MailHandler.swift */; };
+		9A234FBB1C9332F0000C6125 /* MenuHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234FAF1C9332F0000C6125 /* MenuHandlers.swift */; };
+		9A234FBC1C9332F0000C6125 /* NetworkLinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234FB01C9332F0000C6125 /* NetworkLinker.swift */; };
+		9A234FBD1C9332F0000C6125 /* SocialAccounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A234FB11C9332F0000C6125 /* SocialAccounts.plist */; };
+		9A234FBE1C9332F0000C6125 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234FB31C9332F0000C6125 /* DataManager.swift */; };
+		9A234FBF1C9332F0000C6125 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234FB41C9332F0000C6125 /* DateExtensions.swift */; };
+		9A234FC01C9332F0000C6125 /* GeneralDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234FB51C9332F0000C6125 /* GeneralDataManager.swift */; };
+		9A234FC11C9332F0000C6125 /* iDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234FB61C9332F0000C6125 /* iDevice.swift */; };
+		9A234FC21C9332F0000C6125 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234FB71C9332F0000C6125 /* Reachability.swift */; };
+		9A234FC31C9332F0000C6125 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234FB81C9332F0000C6125 /* Threading.swift */; };
+		9A234FC41C9332F0000C6125 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234FB91C9332F0000C6125 /* Version.swift */; };
 		9A7E6D0B1C9224D4007FF2F4 /* MiniRev.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7E6D0A1C9224D4007FF2F4 /* MiniRev.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A7E6D121C9224D4007FF2F4 /* MiniRev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7E6D071C9224D4007FF2F4 /* MiniRev.framework */; };
 		9A7E6D171C9224D4007FF2F4 /* MiniRevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E6D161C9224D4007FF2F4 /* MiniRevTests.swift */; };
@@ -23,6 +41,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A234F7C1C933112000C6125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ReviewFlow.storyboard; sourceTree = "<group>"; };
+		9A234F7E1C933112000C6125 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ReviewFlow.strings; sourceTree = "<group>"; };
+		9A234F7F1C933112000C6125 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ReviewFlow.strings; sourceTree = "<group>"; };
+		9A234F801C933112000C6125 /* RateConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RateConfig.plist; sourceTree = "<group>"; };
+		9A234F811C933112000C6125 /* RateDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateDataManager.swift; sourceTree = "<group>"; };
+		9A234F821C933112000C6125 /* RateFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateFlowViewController.swift; sourceTree = "<group>"; };
+		9A234F831C933112000C6125 /* RateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateHandler.swift; sourceTree = "<group>"; };
+		9A234F841C933112000C6125 /* RatingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingHandler.swift; sourceTree = "<group>"; };
+		9A234FAE1C9332F0000C6125 /* MailHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailHandler.swift; sourceTree = "<group>"; };
+		9A234FAF1C9332F0000C6125 /* MenuHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHandlers.swift; sourceTree = "<group>"; };
+		9A234FB01C9332F0000C6125 /* NetworkLinker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLinker.swift; sourceTree = "<group>"; };
+		9A234FB11C9332F0000C6125 /* SocialAccounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SocialAccounts.plist; sourceTree = "<group>"; };
+		9A234FB31C9332F0000C6125 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9A234FB41C9332F0000C6125 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		9A234FB51C9332F0000C6125 /* GeneralDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralDataManager.swift; sourceTree = "<group>"; };
+		9A234FB61C9332F0000C6125 /* iDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iDevice.swift; sourceTree = "<group>"; };
+		9A234FB71C9332F0000C6125 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		9A234FB81C9332F0000C6125 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
+		9A234FB91C9332F0000C6125 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		9A7E6D071C9224D4007FF2F4 /* MiniRev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MiniRev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7E6D0A1C9224D4007FF2F4 /* MiniRev.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiniRev.h; sourceTree = "<group>"; };
 		9A7E6D0C1C9224D4007FF2F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +87,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A234F7A1C933112000C6125 /* ReviewManager */ = {
+			isa = PBXGroup;
+			children = (
+				9A234F7B1C933112000C6125 /* ReviewFlow.storyboard */,
+				9A234F7D1C933112000C6125 /* ReviewFlow.strings */,
+				9A234F801C933112000C6125 /* RateConfig.plist */,
+				9A234F811C933112000C6125 /* RateDataManager.swift */,
+				9A234F821C933112000C6125 /* RateFlowViewController.swift */,
+				9A234F831C933112000C6125 /* RateHandler.swift */,
+				9A234F841C933112000C6125 /* RatingHandler.swift */,
+			);
+			path = ReviewManager;
+			sourceTree = "<group>";
+		};
+		9A234FAD1C9332F0000C6125 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				9A234FAE1C9332F0000C6125 /* MailHandler.swift */,
+				9A234FAF1C9332F0000C6125 /* MenuHandlers.swift */,
+				9A234FB01C9332F0000C6125 /* NetworkLinker.swift */,
+				9A234FB11C9332F0000C6125 /* SocialAccounts.plist */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		9A234FB21C9332F0000C6125 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9A234FB31C9332F0000C6125 /* DataManager.swift */,
+				9A234FB41C9332F0000C6125 /* DateExtensions.swift */,
+				9A234FB51C9332F0000C6125 /* GeneralDataManager.swift */,
+				9A234FB61C9332F0000C6125 /* iDevice.swift */,
+				9A234FB71C9332F0000C6125 /* Reachability.swift */,
+				9A234FB81C9332F0000C6125 /* Threading.swift */,
+				9A234FB91C9332F0000C6125 /* Version.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		9A7E6CFD1C9224D4007FF2F4 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +147,9 @@
 		9A7E6D091C9224D4007FF2F4 /* MiniRev */ = {
 			isa = PBXGroup;
 			children = (
+				9A234FAD1C9332F0000C6125 /* Social */,
+				9A234FB21C9332F0000C6125 /* Utils */,
+				9A234F7A1C933112000C6125 /* ReviewManager */,
 				9A7E6D0A1C9224D4007FF2F4 /* MiniRev.h */,
 				9A7E6D0C1C9224D4007FF2F4 /* Info.plist */,
 			);
@@ -160,6 +239,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				es,
 			);
 			mainGroup = 9A7E6CFD1C9224D4007FF2F4;
 			productRefGroup = 9A7E6D081C9224D4007FF2F4 /* Products */;
@@ -177,6 +258,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A234F981C933112000C6125 /* ReviewFlow.strings in Resources */,
+				9A234FBD1C9332F0000C6125 /* SocialAccounts.plist in Resources */,
+				9A234F991C933112000C6125 /* RateConfig.plist in Resources */,
+				9A234F971C933112000C6125 /* ReviewFlow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +279,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A234F9B1C933112000C6125 /* RateFlowViewController.swift in Sources */,
+				9A234FC11C9332F0000C6125 /* iDevice.swift in Sources */,
+				9A234FC21C9332F0000C6125 /* Reachability.swift in Sources */,
+				9A234FBE1C9332F0000C6125 /* DataManager.swift in Sources */,
+				9A234FC41C9332F0000C6125 /* Version.swift in Sources */,
+				9A234F9D1C933112000C6125 /* RatingHandler.swift in Sources */,
+				9A234FC31C9332F0000C6125 /* Threading.swift in Sources */,
+				9A234F9A1C933112000C6125 /* RateDataManager.swift in Sources */,
+				9A234FBC1C9332F0000C6125 /* NetworkLinker.swift in Sources */,
+				9A234FBF1C9332F0000C6125 /* DateExtensions.swift in Sources */,
+				9A234FBB1C9332F0000C6125 /* MenuHandlers.swift in Sources */,
+				9A234F9C1C933112000C6125 /* RateHandler.swift in Sources */,
+				9A234FC01C9332F0000C6125 /* GeneralDataManager.swift in Sources */,
+				9A234FBA1C9332F0000C6125 /* MailHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +313,26 @@
 			targetProxy = 9A7E6D131C9224D4007FF2F4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A234F7B1C933112000C6125 /* ReviewFlow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A234F7C1C933112000C6125 /* Base */,
+			);
+			name = ReviewFlow.storyboard;
+			sourceTree = "<group>";
+		};
+		9A234F7D1C933112000C6125 /* ReviewFlow.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A234F7E1C933112000C6125 /* en */,
+				9A234F7F1C933112000C6125 /* es */,
+			);
+			name = ReviewFlow.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9A7E6D191C9224D4007FF2F4 /* Debug */ = {
@@ -253,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -295,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -376,6 +495,7 @@
 				9A7E6D1D1C9224D4007FF2F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A7E6D1E1C9224D4007FF2F4 /* Build configuration list for PBXNativeTarget "MiniRevTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +504,7 @@
 				9A7E6D201C9224D4007FF2F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
