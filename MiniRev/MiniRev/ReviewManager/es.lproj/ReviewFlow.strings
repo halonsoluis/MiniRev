@@ -1,0 +1,26 @@
+
+/* Class = "UIButton"; normalTitle = "Send us an Email"; ObjectID = "0oP-h6-NXE"; */
+"0oP-h6-NXE.normalTitle" = "Envíanos un Email";
+
+/* Class = "UIButton"; normalTitle = "Later"; ObjectID = "HSZ-3X-1jo"; */
+"HSZ-3X-1jo.normalTitle" = "Luego";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "cUj-a8-GIQ"; */
+"cUj-a8-GIQ.normalTitle" = "Si";
+
+/* Class = "UIButton"; normalTitle = "Later"; ObjectID = "d6V-jP-17J"; */
+"d6V-jP-17J.normalTitle" = "Luego";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "ga8-Yx-RpS"; */
+"ga8-Yx-RpS.normalTitle" = "No";
+
+/* Class = "UIButton"; normalTitle = "Go to AppStore"; ObjectID = "pIv-de-as5"; */
+"pIv-de-as5.normalTitle" = "Ir al AppStore";
+
+"Tz2-cd-q5e.text" ="¿Le ha resultado útil usar ";
+
+"shI-wd-SRY.text" ="¿Le gustaría ";
+"54D-46-N8w.text" ="decirnos por qué?";
+
+"0MH-wE-VTL.text" ="¿Le gustaría compartir ";
+"nAG-jH-orF.text" ="su experiencia?";
