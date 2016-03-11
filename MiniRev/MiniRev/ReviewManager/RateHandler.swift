@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /// Rate Functionalities handler
-class RateHandler {
+public class RateHandler {
     /**
      Tries to redirect the user to the rate page, if success, marks the Rate to not appear anymore
      */
@@ -36,10 +36,10 @@ class RateHandler {
      
      :param: parent the parent of the view to be shown
      */
-    static func presentRateDialog(parent: UIViewController) {
+    public static func presentRateDialog(parent: UIViewController) {
         /// If there's no parent there's nothing to do
         //check for connectivity before trying to show the page and ask the RateDataManager if conditions have been meet
-        if !Reachability.isConnectedToNetwork() || !RateDataManager.shouldPrompt() {
+        if /*!Reachability.isConnectedToNetwork() ||*/ !RateDataManager.shouldPrompt() {
             return
         }
         //TODO: Add code here to show the view
@@ -62,5 +62,11 @@ class RateHandler {
         }
     }
     
+    public static func appHasBeingOpenedFromNotification() {
+        RateDataManager.appHasBeingOpenedFromNotification()
+    }
+    public static func userHasOpenedDataView() {
+        RateDataManager.userHasOpenedDataView()
+    }
     
 }
