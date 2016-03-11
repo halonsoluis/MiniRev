@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Reminder_Delay_In_Open_Notification</key>
-	<string>2</string>
+	<string>-1</string>
 	<key>Reminder_Delay_In_Open_DataView</key>
-	<string>3</string>
+	<string>1</string>
 	<key>ShowInCustomRateDialog</key>
 	<string>true</string>
 	<key>AskRateInEveryVersion</key>
@@ -17,7 +17,7 @@
 	<key>Reminder_Delay_In_Days</key>
 	<string>-1</string>
 	<key>Reminder_Delay_In_Times_App_Opened</key>
-	<string>0</string>
+	<string>-1</string>
 	<key>App_ID</key>
 	<string>000000000</string>
 	<key>Affiliate_Code</key>

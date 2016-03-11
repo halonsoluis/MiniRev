@@ -10,7 +10,7 @@ import Foundation
 
 /// Handles all the logic about when to show the RateDialog
 class RateDataManager {
-    private static let debugMode = false
+    private static let debugMode = true
     // If false the conditions will not be evaluated since next restart of the app
     private static var shouldAsk = true
     // Loads the manager in charge of loading data from NSUserDefaults and Config files
