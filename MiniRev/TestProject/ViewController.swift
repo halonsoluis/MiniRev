@@ -18,13 +18,15 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         RateHandler.userHasOpenedDataView()
-        RateHandler.presentRateDialog(self)
-    }
+     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func rateAction(sender: AnyObject) {
+        RateHandler.presentRateDialog(self)
+    }
 
 }
 

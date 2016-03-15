@@ -210,6 +210,7 @@
 		9A7E6D091C9224D4007FF2F4 /* MiniRev */ = {
 			isa = PBXGroup;
 			children = (
+				9AA6A1DB1C9754FE005B9C6D /* Config */,
 				9A234FAD1C9332F0000C6125 /* Social */,
 				9A234FB21C9332F0000C6125 /* Utils */,
 				9A234F7A1C933112000C6125 /* ReviewManager */,
@@ -226,6 +227,13 @@
 				9A7E6D181C9224D4007FF2F4 /* Info.plist */,
 			);
 			path = MiniRevTests;
+			sourceTree = "<group>";
+		};
+		9AA6A1DB1C9754FE005B9C6D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -43,12 +43,10 @@ public class RateHandler {
             return
         }
         //TODO: Add code here to show the view
-        guard let rateVC = UIStoryboard(name: "ReviewFlow", bundle: NSBundle.mainBundle()).instantiateInitialViewController() else {
+        guard let bundle = NSBundle(forClass: self.dynamicType), let rateVC = UIStoryboard(name: "ReviewFlow", bundle: bundle).instantiateInitialViewController() else {
             return
         }
-        
-        
-        
+                
         rateVC.view.frame = CGRect(x: 0, y: -110, width: parent.view.frame.width, height: 110)
         parent.addChildViewController(rateVC)
         parent.view.addSubview(rateVC.view)
