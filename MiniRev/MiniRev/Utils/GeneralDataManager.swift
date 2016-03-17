@@ -6,36 +6,38 @@
 //  Copyright (c) 2015 Hugo Alonso. All rights reserved.
 //
 import Foundation
-
+/// Handler for writing/reading from standard NSUserDefauls / plist files
 public class GeneralDataManager {
-    
+    //MARK: vars & Singleton instance
     private var prefs: NSUserDefaults
     private var myDict: NSDictionary?
-    //MARK: Singleton
-    public static let instance = GeneralDataManager ()
     
+    public static let instance = GeneralDataManager ()
+    //MARK: Private Init
     private convenience init() {
         self.init(userDefaults: NSUserDefaults.standardUserDefaults())
     }
-    
+    private init(userDefaults: NSUserDefaults) {
+        self.prefs = userDefaults
+    }
+    //MARK: Loading of Plist Dictionaries
     public func defaultDataIsLoaded() -> Bool {
         return myDict != nil
     }
     
-    public func loadDefaults(configFileName: String, bundle: NSBundle?) -> GeneralDataManager {
+    public func loadPlistDictionary(configFileName: String, bundle: NSBundle?) -> GeneralDataManager {
         // Read from the Configuration plist the data to make the state of the object valid.
         if myDict != nil {return self}
         myDict = loadDictionary(configFileName,bundle: bundle)
         return self
     }
     
-    public func loadDictionary(configFileName: String, bundle: NSBundle?) -> NSDictionary? {
+    private func loadDictionary(configFileName: String, bundle: NSBundle?) -> NSDictionary? {
         // Read from the Configuration plist the data to make the state of the object valid.
         if bundle == nil {
             print("bundle not found")
             return nil
         }
-        let myDict : NSDictionary?
         if let path = bundle!.pathForResource(configFileName, ofType: "plist") {
             myDict = NSDictionary(contentsOfFile: path)
         }else {
@@ -44,13 +46,17 @@ public class GeneralDataManager {
         return myDict
     }
     
-    private init(userDefaults: NSUserDefaults) {
-        self.prefs = userDefaults
-    }
-    
+    //Extract Data from Plist Dictionaries
     public func getDetailsFromDict(locator: String) -> String? {
         if let myDict = myDict {
             return getDetailsFromSpecificDict(locator, dictionary: myDict)
+        }
+        return nil
+    }
+    
+    public func getArrayDetailsFromDict(locator: String) -> Array<String>? {
+        if let myDict = myDict {
+            return getArrayDetailsFromSpecificDict(locator, dictionary: myDict)
         }
         return nil
     }
@@ -61,6 +67,14 @@ public class GeneralDataManager {
         }
         return nil
     }
+    
+    public func getArrayDetailsFromSpecificDict(locator: String, dictionary: NSDictionary) -> Array<String>? {
+        if let data = dictionary[locator] as? Array<String> {
+            return data
+        }
+        return nil
+    }
+    
     
     //MARK: Functions to Handle Store and Retrieve of data from NSUserDefaults
     ///function to save data to NSUserDefaults
@@ -89,6 +103,17 @@ public class GeneralDataManager {
     
     ///function to load data from NSUserDefaults
     public func loadStringArrayData(locator: String) -> Array<String>? {
+        let data: AnyObject? = loadAnyData(locator)
+        
+        if let _: AnyObject = data {
+            let object = data as? Array<String>
+            return object
+        }
+        return nil
+    }
+    
+    ///function to load data from NSUserDefaults
+    public func loadStringArrayDataConfig(locator: String) -> Array<String>? {
         let data: AnyObject? = loadAnyData(locator)
         
         if let _: AnyObject = data {
