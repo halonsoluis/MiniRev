@@ -42,13 +42,12 @@ public class RateHandler {
         if /*!Reachability.isConnectedToNetwork() ||*/ !RateDataManager.shouldPrompt() {
             return
         }
+        let bundle = NSBundle(forClass: RateHandler.self)
         //TODO: Add code here to show the view
-        guard let rateVC = UIStoryboard(name: "ReviewFlow", bundle: NSBundle.mainBundle()).instantiateInitialViewController() else {
+        guard let rateVC = UIStoryboard(name: "ReviewFlow", bundle: bundle).instantiateInitialViewController() else {
             return
         }
-        
-        
-        
+                
         rateVC.view.frame = CGRect(x: 0, y: -110, width: parent.view.frame.width, height: 110)
         parent.addChildViewController(rateVC)
         parent.view.addSubview(rateVC.view)

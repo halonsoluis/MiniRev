@@ -39,7 +39,7 @@ class RateDataManager {
         }
         
         //if there is no data in the NSUserDefaults (then is the first time app has being opened), set initial data to start counting
-        guard let prompt = dataManager.loadData(doNotShowRateDialogAnymore) else {
+        guard let prompt = dataManager.loadStringData(doNotShowRateDialogAnymore) else {
             dataManager.saveData(doNotShowRateDialogAnymore, object: "false")
             dataManager.saveData(timesAppHasBeingOpened, object: "1")
             
@@ -71,7 +71,7 @@ class RateDataManager {
         }
 
         /// If there is data in the NSUserDefaults
-        guard let data = dataManager.loadData(timesAppHasBeingOpened) , let num = Int(data) else {
+        guard let data = dataManager.loadStringData(timesAppHasBeingOpened) , let num = Int(data) else {
             return false
         }
         //if conditions include times opened and still not there..
@@ -86,7 +86,7 @@ class RateDataManager {
         //If conditions include Date related ones...
         guard getDaysDelay() == -1 else {
             //Load next Date to ask for rating
-            if let dateString = dataManager.loadData(nextPromptLocator) {
+            if let dateString = dataManager.loadStringData(nextPromptLocator) {
                 let nextDate = NSDate(dateString: dateString)
                 //if now is after that date
                 if NSDate().isAfter(nextDate) {
@@ -125,7 +125,7 @@ class RateDataManager {
     }
     
     static func getLast_Rated_Version() -> String{
-        if let ratedVersion = dataManager.loadData(Last_Rated_Version) {
+        if let ratedVersion = dataManager.loadStringData(Last_Rated_Version) {
             return ratedVersion
         }
         return ""
@@ -141,7 +141,7 @@ class RateDataManager {
     }
     
     static func appHasBeingOpenedFromNotification() {
-        guard let numberTimesData = dataManager.loadData(Times_Opened_From_Notification), let numberTimes = Int(numberTimesData) else {
+        guard let numberTimesData = dataManager.loadStringData(Times_Opened_From_Notification), let numberTimes = Int(numberTimesData) else {
             dataManager.saveData(Times_Opened_From_Notification, object: 1.description)
             return
         }
@@ -149,21 +149,21 @@ class RateDataManager {
     }
     
     private static func getTimesUserHasOpenedDataView() -> Int {
-        guard let numberTimesData = dataManager.loadData(Times_Opened_DataView), let numberTimes = Int(numberTimesData) else {
+        guard let numberTimesData = dataManager.loadStringData(Times_Opened_DataView), let numberTimes = Int(numberTimesData) else {
             return 0
         }
         return numberTimes
     }
     
     private static func getTimesAppHasBeingOpenedFromNotification() -> Int {
-        guard let numberTimesData = dataManager.loadData(Times_Opened_From_Notification), let numberTimes = Int(numberTimesData) else {
+        guard let numberTimesData = dataManager.loadStringData(Times_Opened_From_Notification), let numberTimes = Int(numberTimesData) else {
             return 0
         }
         return numberTimes
     }
     
     static func userHasOpenedDataView() {
-        guard let numberTimesData = dataManager.loadData(Times_Opened_DataView), let numberTimes = Int(numberTimesData) else {
+        guard let numberTimesData = dataManager.loadStringData(Times_Opened_DataView), let numberTimes = Int(numberTimesData) else {
             dataManager.saveData(Times_Opened_DataView, object: 1.description)
             return
         }
