@@ -122,6 +122,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="110"/>
                     <connections>
+                        <outlet property="appNamed" destination="FN3-LY-NNA" id="Mgs-jc-TQq"/>
                         <outlet property="firstPageTitle" destination="Tz2-cd-q5e" id="4Wr-my-Ptk"/>
                     </connections>
                 </viewController>

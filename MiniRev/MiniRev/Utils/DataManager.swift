@@ -28,7 +28,7 @@ final class DataManager: NSObject {
         var socialAccounts = [String:String]()
         
         // Read from the Configuration plist the data.
-        guard let path = NSBundle.mainBundle().pathForResource("SocialAccounts", ofType: "plist") else {
+        guard let path = NSBundle(forClass: DataManager.self).pathForResource("SocialAccounts", ofType: "plist") else {
             return [:]
         }
         

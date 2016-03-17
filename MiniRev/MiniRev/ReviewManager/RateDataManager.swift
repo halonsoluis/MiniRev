@@ -18,7 +18,7 @@ class RateDataManager {
     
     private static var dataManager: GeneralDataManager {
         if _dataManager == nil{
-            _dataManager = GeneralDataManager.instance.loadDefaults("RateConfig", bundle: locateBundle())
+            _dataManager = GeneralDataManager.instance.loadPlistDictionary("RateConfig", bundle: locateBundle())
         }
         return _dataManager!
     }
@@ -268,8 +268,8 @@ class RateDataManager {
         return "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?pageNumber=0&sortOrdering=1&type=Purple+Software&mt=8&id=\(getAppID())"
     }
     
-    static func locateBundle() -> NSBundle? {
-        return NSBundle.mainBundle()
+    static func locateBundle() -> NSBundle {
+        return NSBundle(forClass: RateDataManager.self)
     }
     
     //MARK: Locators
