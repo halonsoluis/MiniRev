@@ -14,6 +14,11 @@ class RateFlowViewController: UIViewController {
     @IBOutlet weak var firstPageTitle: UILabel!
     @IBOutlet weak var giveAReviewTitle: UILabel!
     @IBOutlet weak var sendMailTitle: UILabel!
+    @IBOutlet weak var appNamed: UILabel!
+    
+    override func viewDidLoad() {
+        appNamed?.text = "your app name"
+    }
   
     @IBAction func prepareForFeedBack(sender: AnyObject) {
         guard let parentViewController = self.parentViewController?.parentViewController else {

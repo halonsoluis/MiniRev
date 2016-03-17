@@ -1,13 +1,12 @@
 //
 //  AppDelegate.swift
-//  MiniRevTest
+//  MiniRevTestProject
 //
-//  Created by Hugo on 3/17/16.
-//  Copyright © 2016 halonso. All rights reserved.
+//  Created by Hugo Alonso on 3/17/16.
+//  Copyright © 2016 Hugo Alonso. All rights reserved.
 //
 
 import UIKit
-import MiniRev
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,11 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        if let _ = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
-            RateHandler.appHasBeingOpenedFromNotification()
-        }
-        
         return true
     }
 
