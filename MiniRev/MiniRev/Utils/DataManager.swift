@@ -24,39 +24,11 @@ final class DataManager: NSObject {
         }
     }
     private static var _socialAccountsData : [String:String] = {
-        
-        var socialAccounts = [String:String]()
-        
         // Read from the Configuration plist the data.
-        guard let path = NSBundle(forClass: DataManager.self).pathForResource("SocialAccounts", ofType: "plist") else {
+        guard let path = NSBundle(forClass: DataManager.self).pathForResource("SocialAccounts", ofType: "plist"), let dict = NSDictionary(contentsOfFile: path) else {
             return [:]
         }
-        
-        guard let dict = NSDictionary(contentsOfFile: path) else {
-            return [:]
-        }
-        
-        if let data = dict[destinationMail] as? String {
-            socialAccounts[destinationMail] = data
-        }
-        if let data = dict[twitter_username] as? String {
-            socialAccounts[twitter_username] = data
-        }
-        
-        if let data = dict[facebook_pageId] as? String {
-            socialAccounts[facebook_pageId] = data
-        }
-        if let data = dict[facebook_pageName] as? String {
-            socialAccounts[facebook_pageName] = data
-        }
-        if let data = dict[faqPage] as? String {
-            socialAccounts[faqPage] = data
-        }
-        if let data = dict[privacyPolicePage] as? String {
-            socialAccounts[privacyPolicePage] = data
-        }
-        
-        return socialAccounts
+        return dict as! [String : String]
     }()
     /**
      A shortcut to obtain the predefined receipt
