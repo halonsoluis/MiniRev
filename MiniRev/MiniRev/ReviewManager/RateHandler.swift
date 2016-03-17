@@ -42,8 +42,9 @@ public class RateHandler {
         if /*!Reachability.isConnectedToNetwork() ||*/ !RateDataManager.shouldPrompt() {
             return
         }
+        let bundle = NSBundle(forClass: RateHandler.self)
         //TODO: Add code here to show the view
-        guard let bundle = NSBundle(forClass: self.dynamicType), let rateVC = UIStoryboard(name: "ReviewFlow", bundle: bundle).instantiateInitialViewController() else {
+        guard let rateVC = UIStoryboard(name: "ReviewFlow", bundle: bundle).instantiateInitialViewController() else {
             return
         }
                 

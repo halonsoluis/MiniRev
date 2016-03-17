@@ -5,12 +5,13 @@
 //  Created by Hugo on 7/21/15.
 //  Copyright (c) 2015 Hugo Alonso. All rights reserved.
 //
+import Foundation
 
 public class GeneralDataManager {
     
     private var prefs: NSUserDefaults
     private var myDict: NSDictionary?
-        //MARK: Singleton
+    //MARK: Singleton
     public static let instance = GeneralDataManager ()
     
     private convenience init() {
@@ -24,11 +25,11 @@ public class GeneralDataManager {
     public func loadDefaults(configFileName: String, bundle: NSBundle?) -> GeneralDataManager {
         // Read from the Configuration plist the data to make the state of the object valid.
         if myDict != nil {return self}
-        myDict = loadDefaultsDictionary(configFileName,bundle: bundle)
+        myDict = loadDictionary(configFileName,bundle: bundle)
         return self
     }
     
-    public func loadDefaultsDictionary(configFileName: String, bundle: NSBundle?) -> NSDictionary? {
+    public func loadDictionary(configFileName: String, bundle: NSBundle?) -> NSDictionary? {
         // Read from the Configuration plist the data to make the state of the object valid.
         if bundle == nil {
             print("bundle not found")
@@ -56,8 +57,8 @@ public class GeneralDataManager {
     
     public func getDetailsFromSpecificDict(locator: String, dictionary: NSDictionary) -> String? {
         if let data = dictionary[locator] as? String {
-                return data
-            }
+            return data
+        }
         return nil
     }
     
@@ -76,7 +77,7 @@ public class GeneralDataManager {
     }
     
     ///function to load data from NSUserDefaults
-    public func loadData(locator: String) -> String? {
+    public func loadStringData(locator: String) -> String? {
         let data: AnyObject? = loadAnyData(locator)
         
         if let _: AnyObject = data {
@@ -85,13 +86,25 @@ public class GeneralDataManager {
         }
         return nil
     }
+    
+    ///function to load data from NSUserDefaults
+    public func loadStringArrayData(locator: String) -> Array<String>? {
+        let data: AnyObject? = loadAnyData(locator)
+        
+        if let _: AnyObject = data {
+            let object = data as? Array<String>
+            return object
+        }
+        return nil
+    }
+    
     /**
-    General function to load any type of data from an NSUserDefaults
-    
-    - parameter locator: the locator for desired to load data
-    
-    - returns: the data loaded
-    */
+     General function to load any type of data from an NSUserDefaults
+     
+     - parameter locator: the locator for desired to load data
+     
+     - returns: the data loaded
+     */
     private func loadAnyData(locator: String) -> AnyObject?{
         let data: AnyObject? = prefs.objectForKey(locator)
         
