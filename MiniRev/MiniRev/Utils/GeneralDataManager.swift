@@ -147,7 +147,7 @@ public class GeneralDataManager {
 //MARK: Search for Plist File
 extension GeneralDataManager {
     //Obtain current Bundle, the one of this class
-    private static func currentBundle() -> NSBundle {
+    static func currentBundle() -> NSBundle {
         return NSBundle(forClass: self)
     }
     /**

@@ -41,37 +41,44 @@ enum NetworkLinker {
         
         switch self {
         case .Facebook:
-            if let faceBookPageId = SocialAccounts.facebook_pageId.obtainData(),
-               let faceBookPageName = SocialAccounts.facebook_pageName.obtainData(){
+            let faceBookPageId = SocialAccounts.facebook_pageId.obtainData()
+            let faceBookPageName = SocialAccounts.facebook_pageName.obtainData()
+            
+            if faceBookPageId.characters.count > 0 && faceBookPageName.characters.count > 0{
                
                 scheme = "fb://profile/\(faceBookPageId)"
                 page = "https://www.facebook.com/\(faceBookPageName)"
             }
             
         case .Twitter:
-            if let twitterUser = SocialAccounts.twitter_username.obtainData(){
+            let twitterUser = SocialAccounts.twitter_username.obtainData()
+            if twitterUser.characters.count > 0 {
                 scheme = "twitter://user?screen_name=\(twitterUser)"
                 page = "https://twitter.com/\(twitterUser)"
             }
             
         case .GooglePlus:
-            if let PageId = SocialAccounts.gPlusPageId.obtainData(){
+            let PageId = SocialAccounts.gPlusPageId.obtainData()
+            if PageId.characters.count > 0 {
                 scheme = "gplus://plus.google.com/u/0/\(PageId)"
                 page = "https://plus.google.com/\(PageId)"
             }
         case .Instagram:
-                if let instagramUser = SocialAccounts.instagram_username.obtainData(){
+            let instagramUser = SocialAccounts.instagram_username.obtainData()
+                if instagramUser.characters.count > 0 {
                     scheme = "instagram://user?username=\(instagramUser)"
                     page = "https://www.instagram.com/\(instagramUser)"
                 }
             
         case .FAQPage:
-            if let faqPage = SocialAccounts.faqPage.obtainData(){
+            let faqPage = SocialAccounts.faqPage.obtainData()
+            if faqPage.characters.count > 0 {
                 page = faqPage
             }
             
         case .PrivacyPolicePage:
-            if let privacyPolicePage = SocialAccounts.privacyPolicePage.obtainData(){
+            let privacyPolicePage = SocialAccounts.privacyPolicePage.obtainData()
+            if privacyPolicePage.characters.count > 0 {
                 page = privacyPolicePage
             }
         }

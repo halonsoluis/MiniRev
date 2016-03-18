@@ -15,12 +15,17 @@ enum AppConfig: String {
     Campaign_Code = "Campaign_Code",
     AppName = "AppName"
   
-    static let data = DataManager(configFile: "AppConfig").data
+    private static let configFile = "AppConfig"
+    static let data = DataManager(configFile: configFile).data
     
-    func obtainData() -> String? {
+    func obtainData() -> String {
         guard let data = self.dynamicType.data, let value = data[self.rawValue] else {
-            return nil
+            if let value = DataManager(configFile: self.dynamicType.configFile, defaults: true).data?[self.rawValue] {
+                return value
+            }
+            return ""
         }
         return value
     }
+
 }

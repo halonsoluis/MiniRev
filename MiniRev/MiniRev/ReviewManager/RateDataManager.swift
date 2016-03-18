@@ -10,7 +10,6 @@ import Foundation
 
 /// Handles all the logic about when to show the RateDialog
 class RateDataManager {
-    private static let debugMode = true
     // If false the conditions will not be evaluated since next restart of the app
     private static var shouldAsk = true
     // Loads the manager in charge of loading data from NSUserDefaults and Config files
@@ -18,7 +17,7 @@ class RateDataManager {
     
     private static var dataManager: GeneralDataManager {
         if _dataManager == nil{
-            _dataManager = GeneralDataManager.buildDataManager(plistConfigFileName: "RateConfig")
+            _dataManager = GeneralDataManager.buildDataManager()
         }
         return _dataManager!
     }
@@ -29,7 +28,7 @@ class RateDataManager {
      */
     static func shouldPrompt() -> Bool {
         
-        guard !debugMode else {
+        guard !debugMode() else {
             return true
         }
         
@@ -185,97 +184,6 @@ class RateDataManager {
         shouldAsk = false
     }
     
-    static func getDaysDelay() -> Int{
-        if let days = DelayConfig.Reminder_Delay_In_Days.obtainData(){
-            if let days = Int(days) {
-                return days
-            }
-        }
-        //default value
-        return 5
-    }
-    static func getReminder_Delay_In_Open_DataView() -> Int {
-        if let days = DelayConfig.Reminder_Delay_In_Open_DataView.obtainData(){
-            if let days = Int(days) {
-                return days
-            }
-        }
-        //default value
-        return 5
-    }
-    static func getReminder_Delay_In_Open_Notification() -> Int{
-        if let days = DelayConfig.Reminder_Delay_In_Open_Notification.obtainData(){
-            if let days = Int(days) {
-                return days
-            }
-        }
-        //default value
-        return 5
-    }
-    static func getTimesOpenedDelay() -> Int{
-        if let num = DelayConfig.Reminder_Delay_In_Times_App_Opened.obtainData(){
-            if let num = Int(num) {
-                return num
-            }
-        }
-        //default value
-        return 5
-    }
-    static func getAppID() -> String{
-        if let data = AppConfig.App_ID.obtainData(){
-            return data
-            
-        }
-        //default value
-        return ""
-    }
-    static func getAffiliateCode() -> String {
-        if let data = AppConfig.Affiliate_Code.obtainData(){
-            return data
-            
-        }
-        //default value
-        return ""
-    }
-    static func getCampaignCode() -> String{
-        if let data = AppConfig.Campaign_Code.obtainData(){
-            return data
-        }
-        //default value
-        return ""
-    }
-    
-    static func askForRateEveryVersion() -> Bool{
-        if let data = RateConfig.AskRateInEveryVersion.obtainData(){
-            return data == "false" ? false : true
-        }
-        //default value
-        return true
-    }
-    
-    static func getAppName() -> String{
-        if let data = AppConfig.AppName.obtainData(){
-            return data
-        }
-        //default value
-        return "No Name Set"
-    }
-    
-    static func getAppStoreUrl() -> String{
-        if let data = RateConfig.App_Store_URL.obtainData(){
-            return data.stringByReplacingOccurrencesOfString("APP_ID", withString: getAppID(), options: NSStringCompareOptions.LiteralSearch, range: nil)
-        }
-        //default value
-        return "itms-apps://itunes.apple.com/app/id\(getAppID())"
-    }
-    static func getAppStoreRateUrl() -> String{
-        if let data = RateConfig.App_Store_Rate_URL.obtainData(){
-            return data.stringByReplacingOccurrencesOfString("APP_ID", withString: getAppID(), options: NSStringCompareOptions.LiteralSearch, range: nil)
-        }
-        //default value
-        return "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?pageNumber=0&sortOrdering=1&type=Purple+Software&mt=8&id=\(getAppID())"
-    }
-    
     //MARK: Locators
     
     //NSUSERDefaults
@@ -287,6 +195,74 @@ class RateDataManager {
     private static let Times_Opened_From_Notification = "Times_Opened_From_Notification"
     private static let Times_Opened_DataView = "Times_Opened_DataView"
     
-     
+}
+
+// MARK: - Data Handlers for data retrieved from Plist config Files
+extension RateDataManager {
     
+    static func getDaysDelay() -> Int{
+        let days = DelayConfig.Reminder_Delay_In_Days.obtainData()
+        if let days = Int(days) {
+            return days
+        }
+        //default value
+        return 3
+    }
+    static func getReminder_Delay_In_Open_DataView() -> Int {
+        let days = DelayConfig.Reminder_Delay_In_Open_DataView.obtainData()
+        if let days = Int(days) {
+            return days
+        }
+        //default value
+        return 5
+    }
+    static func getReminder_Delay_In_Open_Notification() -> Int{
+        let days = DelayConfig.Reminder_Delay_In_Open_Notification.obtainData()
+        if let days = Int(days) {
+            return days
+        }
+        //default value
+        return 5
+    }
+    static func getTimesOpenedDelay() -> Int{
+        let num = DelayConfig.Reminder_Delay_In_Times_App_Opened.obtainData()
+        if let num = Int(num) {
+            return num
+        }
+        //default value
+        return 5
+    }
+    static func getAppID() -> String{
+        return AppConfig.App_ID.obtainData()
+    }
+    static func getAffiliateCode() -> String {
+        return AppConfig.Affiliate_Code.obtainData()
+    }
+    static func getCampaignCode() -> String{
+        return AppConfig.Campaign_Code.obtainData()
+    }
+    
+    static func askForRateEveryVersion() -> Bool{
+        let data = RateConfig.AskRateInEveryVersion.obtainData()
+        return data == "false" ? false : true
+    }
+    
+    static func debugMode() -> Bool{
+        let data = RateConfig.debugMode.obtainData()
+        return data == "false" ? false : true
+    }
+    
+    static func getAppName() -> String{
+        return AppConfig.AppName.obtainData()
+    }
+    
+    static func getAppStoreUrl() -> String{
+        let data = RateConfig.App_Store_URL.obtainData()
+        return data.stringByReplacingOccurrencesOfString("APP_ID", withString: getAppID(), options: NSStringCompareOptions.LiteralSearch, range: nil)
+    }
+    static func getAppStoreRateUrl() -> String{
+        let data = RateConfig.App_Store_Rate_URL.obtainData()
+        return data.stringByReplacingOccurrencesOfString("APP_ID", withString: getAppID(), options: NSStringCompareOptions.LiteralSearch, range: nil)
+    }
+
 }

@@ -16,12 +16,18 @@ enum DelayConfig: String {
     Reminder_Delay_In_Open_Notification = "Reminder_Delay_In_Open_Notification",
     Reminder_Delay_In_Open_DataView = "Reminder_Delay_In_Open_DataView"
     
-    static let data = DataManager(configFile: "DelayConfig").data
+    private static let configFile = "DelayConfig"
     
-    func obtainData() -> String? {
+    static let data = DataManager(configFile: configFile).data
+    
+    func obtainData() -> String {
         guard let data = self.dynamicType.data, let value = data[self.rawValue] else {
-            return nil
+            if let value = DataManager(configFile: self.dynamicType.configFile, defaults: true).data?[self.rawValue] {
+                return value
+            }
+            return ""
         }
         return value
     }
+
 }

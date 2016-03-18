@@ -15,11 +15,15 @@ enum RateConfig: String {
     AskRateInEveryVersion = "AskRateInEveryVersion",
     debugMode = "debugMode"
     
-    static let data = DataManager(configFile: "RateConfig").data
+    private static let configFile = "RateConfig"
+    static let data = DataManager(configFile: configFile).data
     
-    func obtainData() -> String? {
+    func obtainData() -> String {
         guard let data = self.dynamicType.data, let value = data[self.rawValue] else {
-            return nil
+            if let value = DataManager(configFile: self.dynamicType.configFile, defaults: true).data?[self.rawValue] {
+                return value
+            }
+            return ""
         }
         return value
     }

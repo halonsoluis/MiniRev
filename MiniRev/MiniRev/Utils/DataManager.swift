@@ -14,8 +14,13 @@ final class DataManager: NSObject {
     let data: [String:String]?
    
    
-    init(configFile: String) {
-        data = GeneralDataManager.locatePlistFile(configFile) as? [String : String]
+    init(configFile: String, defaults: Bool = false) {
+        
+        guard defaults else {
+            data = GeneralDataManager.locatePlistFile(configFile) as? [String : String]
+            return
+        }
+        data = GeneralDataManager.locatePlistFile(configFile, bundle: GeneralDataManager.currentBundle()) as? [String : String]
    /*
         guard data != nil else {
             return nil

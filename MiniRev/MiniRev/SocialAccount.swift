@@ -19,11 +19,15 @@ enum SocialAccounts: String {
     instagram_username = "instagram_username",
     gPlusPageId = "gPlusPageId"
     
-    static let data = DataManager(configFile: "SocialAccounts").data
+    private static let configFile = "SocialAccounts"
+    static let data = DataManager(configFile: configFile).data
     
-    func obtainData() -> String? {
+    func obtainData() -> String {
         guard let data = self.dynamicType.data, let value = data[self.rawValue] else {
-            return nil
+            if let value = DataManager(configFile: self.dynamicType.configFile, defaults: true).data?[self.rawValue] {
+                return value
+            }
+            return ""
         }
         return value
     }
@@ -33,9 +37,6 @@ enum SocialAccounts: String {
      - returns: the email to wich mail must be send
      */
     static func getEmailReceipt() -> String {
-        guard let value = SocialAccounts.destinationMail.obtainData() else {
-            return ""
-        }
-       return value
+        return SocialAccounts.destinationMail.obtainData()
     }
 }
