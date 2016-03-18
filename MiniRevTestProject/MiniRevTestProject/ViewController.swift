@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rateAction(sender: AnyObject) {
-             RateHandler.presentRateDialog(self)
+        RateHandler.presentRateDialog(self)
     }
 }
 

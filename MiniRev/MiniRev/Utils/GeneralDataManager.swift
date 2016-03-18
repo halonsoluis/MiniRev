@@ -9,15 +9,14 @@ import Foundation
 /// Handler for writing/reading from standard NSUserDefauls / plist files
 public class GeneralDataManager {
     //MARK: vars & Singleton instance
-    private var prefs: NSUserDefaults
-    private var myDict: NSDictionary?
+    var prefs: NSUserDefaults
+    var myDict: NSDictionary?
     
-    public static let instance = GeneralDataManager ()
     //MARK: Private Init
     private convenience init() {
         self.init(userDefaults: NSUserDefaults.standardUserDefaults())
     }
-    private init(userDefaults: NSUserDefaults) {
+    public init(userDefaults: NSUserDefaults) {
         self.prefs = userDefaults
     }
     //MARK: Loading of Plist Dictionaries
@@ -25,27 +24,30 @@ public class GeneralDataManager {
         return myDict != nil
     }
     
+    public static func buildDataManager(userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults(), plistConfigFileName: String? = nil, bundle: NSBundle? = nil) -> GeneralDataManager {
+        let dataManager = GeneralDataManager(userDefaults: userDefaults)
+        
+        guard let plistConfigFileName = plistConfigFileName else {
+            return dataManager
+        }
+        
+        dataManager.loadPlistDictionary(plistConfigFileName, bundle: bundle)
+        
+        return dataManager
+    }
+   
     public func loadPlistDictionary(configFileName: String, bundle: NSBundle?) -> GeneralDataManager {
         // Read from the Configuration plist the data to make the state of the object valid.
-        if myDict != nil {return self}
-        myDict = loadDictionary(configFileName,bundle: bundle)
+        guard myDict == nil else {return self}
+        guard bundle != nil else {
+            myDict = GeneralDataManager.locatePlistFile(configFileName)
+            return self
+        }
+        myDict = GeneralDataManager.locatePlistFile(configFileName,bundle: bundle)
         return self
     }
     
-    private func loadDictionary(configFileName: String, bundle: NSBundle?) -> NSDictionary? {
-        // Read from the Configuration plist the data to make the state of the object valid.
-        if bundle == nil {
-            print("bundle not found")
-            return nil
-        }
-        if let path = bundle!.pathForResource(configFileName, ofType: "plist") {
-            myDict = NSDictionary(contentsOfFile: path)
-        }else {
-            myDict = nil
-        }
-        return myDict
-    }
-    
+
     //Extract Data from Plist Dictionaries
     public func getDetailsFromDict(locator: String) -> String? {
         if let myDict = myDict {
@@ -138,6 +140,37 @@ public class GeneralDataManager {
             return object
         }
         return nil
+    }
+    
+}
+
+//MARK: Search for Plist File
+extension GeneralDataManager {
+    //Obtain current Bundle, the one of this class
+    static func currentBundle() -> NSBundle {
+        return NSBundle(forClass: self)
+    }
+    /**
+     Search for Plist File, first at main bundle (or another specified by user) and then in current bundle
+     
+     - parameter fileName: plis file name (whithout extension)
+     - parameter bundle:   leave empty for search in main bundle, modify to check in another
+     
+     - returns: the dictionary extracted from the bundle
+     */
+    static func locatePlistFile(fileName: String, bundle: NSBundle? = NSBundle.mainBundle()) -> NSDictionary? {
+        guard let bundle = bundle else {
+            return nil
+        }
+        
+        guard let path = bundle.pathForResource(fileName, ofType: "plist") else {
+            print("fallback to bundle's plist file, No plist found in bundle: \(bundle.bundleIdentifier!)")
+            return locatePlistFile(fileName, bundle: currentBundle())
+        }
+        guard let dict = NSDictionary(contentsOfFile: path) else {
+            return nil
+        }
+        return dict
     }
     
 }

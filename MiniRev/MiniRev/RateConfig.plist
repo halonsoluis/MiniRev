@@ -2,25 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>App_ID</key>
-	<string></string>
-	<key>Affiliate_Code</key>
-	<string></string>
-	<key>Campaign_Code</key>
-	<string></string>
-	<key> </key>
-	<string></string>
-	<key>Reminder_Delay_In_Open_Notification</key>
-	<string>-1</string>
-	<key>Reminder_Delay_In_Open_DataView</key>
-	<string>1</string>
-	<key>Reminder_Delay_In_Days</key>
-	<string>-1</string>
-	<key>Reminder_Delay_In_Times_App_Opened</key>
-	<string>-1</string>
-	<key>  </key>
-	<string></string>
-	<key>ShowInCustomRateDialog</key>
+	<key>debugMode</key>
 	<string>true</string>
 	<key>AskRateInEveryVersion</key>
 	<string>true</string>

@@ -14,6 +14,9 @@
 		9A9373B81C9B1C7E003328BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A9373B61C9B1C7E003328BD /* LaunchScreen.storyboard */; };
 		9A9373C21C9B2A08003328BD /* MiniRev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9373C11C9B2A08003328BD /* MiniRev.framework */; };
 		9A9373C31C9B2A08003328BD /* MiniRev.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9373C11C9B2A08003328BD /* MiniRev.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9ADBCA5E1C9BD68F00EC2B44 /* SocialAccounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ADBCA5D1C9BD68F00EC2B44 /* SocialAccounts.plist */; };
+		9ADBCA601C9BD6AF00EC2B44 /* AppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ADBCA5F1C9BD6AF00EC2B44 /* AppConfig.plist */; };
+		9ADBCA621C9BD6D800EC2B44 /* DelayConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ADBCA611C9BD6D800EC2B44 /* DelayConfig.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +42,9 @@
 		9A9373B71C9B1C7E003328BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A9373B91C9B1C7E003328BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9373C11C9B2A08003328BD /* MiniRev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = MiniRev.framework; path = "/Users/Hugo/Library/Developer/Xcode/DerivedData/MiniRev-egyrdycafbhhneedakkymbtogoys/Build/Products/Debug-iphoneos/MiniRev.framework"; sourceTree = "<absolute>"; };
+		9ADBCA5D1C9BD68F00EC2B44 /* SocialAccounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SocialAccounts.plist; sourceTree = "<group>"; };
+		9ADBCA5F1C9BD6AF00EC2B44 /* AppConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppConfig.plist; sourceTree = "<group>"; };
+		9ADBCA611C9BD6D800EC2B44 /* DelayConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DelayConfig.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +85,19 @@
 				9A9373B41C9B1C7E003328BD /* Assets.xcassets */,
 				9A9373B61C9B1C7E003328BD /* LaunchScreen.storyboard */,
 				9A9373B91C9B1C7E003328BD /* Info.plist */,
+				9ADBCA631C9BD74900EC2B44 /* ReviewConfig */,
 			);
 			path = MiniRevTestProject;
+			sourceTree = "<group>";
+		};
+		9ADBCA631C9BD74900EC2B44 /* ReviewConfig */ = {
+			isa = PBXGroup;
+			children = (
+				9ADBCA5D1C9BD68F00EC2B44 /* SocialAccounts.plist */,
+				9ADBCA5F1C9BD6AF00EC2B44 /* AppConfig.plist */,
+				9ADBCA611C9BD6D800EC2B44 /* DelayConfig.plist */,
+			);
+			name = ReviewConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +160,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ADBCA621C9BD6D800EC2B44 /* DelayConfig.plist in Resources */,
 				9A9373B81C9B1C7E003328BD /* LaunchScreen.storyboard in Resources */,
+				9ADBCA5E1C9BD68F00EC2B44 /* SocialAccounts.plist in Resources */,
 				9A9373B51C9B1C7E003328BD /* Assets.xcassets in Resources */,
+				9ADBCA601C9BD6AF00EC2B44 /* AppConfig.plist in Resources */,
 				9A9373B31C9B1C7E003328BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +335,7 @@
 				9A9373BE1C9B1C7E003328BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
