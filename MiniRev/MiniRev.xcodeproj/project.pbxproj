@@ -31,6 +31,9 @@
 		9ADBCA5A1C9BD4DA00EC2B44 /* RateConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ADBCA591C9BD4DA00EC2B44 /* RateConfig.plist */; };
 		9ADBCA5C1C9BD61D00EC2B44 /* DelayConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ADBCA5B1C9BD61D00EC2B44 /* DelayConfig.plist */; };
 		9ADBCA671C9BDBC700EC2B44 /* SocialAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBCA661C9BDBC700EC2B44 /* SocialAccount.swift */; };
+		9ADBCA6A1C9BE2AE00EC2B44 /* DelayConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBCA691C9BE2AE00EC2B44 /* DelayConfig.swift */; };
+		9ADBCA6C1C9BE2BA00EC2B44 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBCA6B1C9BE2BA00EC2B44 /* AppConfig.swift */; };
+		9ADBCA6E1C9BE2C900EC2B44 /* RateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBCA6D1C9BE2C900EC2B44 /* RateConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		9ADBCA591C9BD4DA00EC2B44 /* RateConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RateConfig.plist; sourceTree = "<group>"; };
 		9ADBCA5B1C9BD61D00EC2B44 /* DelayConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DelayConfig.plist; sourceTree = "<group>"; };
 		9ADBCA661C9BDBC700EC2B44 /* SocialAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialAccount.swift; sourceTree = "<group>"; };
+		9ADBCA691C9BE2AE00EC2B44 /* DelayConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayConfig.swift; sourceTree = "<group>"; };
+		9ADBCA6B1C9BE2BA00EC2B44 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		9ADBCA6D1C9BE2C900EC2B44 /* RateConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +181,7 @@
 			children = (
 				9ADBCA651C9BD88C00EC2B44 /* AppSpecific */,
 				9ADBCA641C9BD88200EC2B44 /* internal */,
-				9ADBCA661C9BDBC700EC2B44 /* SocialAccount.swift */,
+				9ADBCA681C9BE28D00EC2B44 /* DataAccessors */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -196,6 +202,17 @@
 				9ADBCA5B1C9BD61D00EC2B44 /* DelayConfig.plist */,
 			);
 			name = AppSpecific;
+			sourceTree = "<group>";
+		};
+		9ADBCA681C9BE28D00EC2B44 /* DataAccessors */ = {
+			isa = PBXGroup;
+			children = (
+				9ADBCA661C9BDBC700EC2B44 /* SocialAccount.swift */,
+				9ADBCA691C9BE2AE00EC2B44 /* DelayConfig.swift */,
+				9ADBCA6B1C9BE2BA00EC2B44 /* AppConfig.swift */,
+				9ADBCA6D1C9BE2C900EC2B44 /* RateConfig.swift */,
+			);
+			name = DataAccessors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A234F9B1C933112000C6125 /* RateFlowViewController.swift in Sources */,
+				9ADBCA6A1C9BE2AE00EC2B44 /* DelayConfig.swift in Sources */,
 				9A234FC11C9332F0000C6125 /* iDevice.swift in Sources */,
 				9A234FC21C9332F0000C6125 /* Reachability.swift in Sources */,
 				9A234FBE1C9332F0000C6125 /* DataManager.swift in Sources */,
@@ -324,12 +342,14 @@
 				9A234FC31C9332F0000C6125 /* Threading.swift in Sources */,
 				9A234F9A1C933112000C6125 /* RateDataManager.swift in Sources */,
 				9A234FBC1C9332F0000C6125 /* NetworkLinker.swift in Sources */,
+				9ADBCA6C1C9BE2BA00EC2B44 /* AppConfig.swift in Sources */,
 				9A234FBF1C9332F0000C6125 /* DateExtensions.swift in Sources */,
 				9A234FBB1C9332F0000C6125 /* MenuHandlers.swift in Sources */,
 				9A234F9C1C933112000C6125 /* RateHandler.swift in Sources */,
 				9ADBCA671C9BDBC700EC2B44 /* SocialAccount.swift in Sources */,
 				9A234FC01C9332F0000C6125 /* GeneralDataManager.swift in Sources */,
 				9A234FBA1C9332F0000C6125 /* MailHandler.swift in Sources */,
+				9ADBCA6E1C9BE2C900EC2B44 /* RateConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

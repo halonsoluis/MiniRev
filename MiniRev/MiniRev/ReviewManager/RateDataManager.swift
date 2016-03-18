@@ -186,7 +186,7 @@ class RateDataManager {
     }
     
     static func getDaysDelay() -> Int{
-        if let days = dataManager.getDetailsFromDict(Reminder_Delay_In_Days){
+        if let days = DelayConfig.Reminder_Delay_In_Days.obtainData(){
             if let days = Int(days) {
                 return days
             }
@@ -195,7 +195,7 @@ class RateDataManager {
         return 5
     }
     static func getReminder_Delay_In_Open_DataView() -> Int {
-        if let days = dataManager.getDetailsFromDict(Reminder_Delay_In_Open_DataView){
+        if let days = DelayConfig.Reminder_Delay_In_Open_DataView.obtainData(){
             if let days = Int(days) {
                 return days
             }
@@ -204,7 +204,7 @@ class RateDataManager {
         return 5
     }
     static func getReminder_Delay_In_Open_Notification() -> Int{
-        if let days = dataManager.getDetailsFromDict(Reminder_Delay_In_Open_Notification){
+        if let days = DelayConfig.Reminder_Delay_In_Open_Notification.obtainData(){
             if let days = Int(days) {
                 return days
             }
@@ -213,7 +213,7 @@ class RateDataManager {
         return 5
     }
     static func getTimesOpenedDelay() -> Int{
-        if let num = dataManager.getDetailsFromDict(Reminder_Delay_In_Times_App_Opened){
+        if let num = DelayConfig.Reminder_Delay_In_Times_App_Opened.obtainData(){
             if let num = Int(num) {
                 return num
             }
@@ -222,7 +222,7 @@ class RateDataManager {
         return 5
     }
     static func getAppID() -> String{
-        if let data = dataManager.getDetailsFromDict(App_ID){
+        if let data = AppConfig.App_ID.obtainData(){
             return data
             
         }
@@ -230,7 +230,7 @@ class RateDataManager {
         return ""
     }
     static func getAffiliateCode() -> String {
-        if let data = dataManager.getDetailsFromDict(Affiliate_Code){
+        if let data = AppConfig.Affiliate_Code.obtainData(){
             return data
             
         }
@@ -238,7 +238,7 @@ class RateDataManager {
         return ""
     }
     static func getCampaignCode() -> String{
-        if let data = dataManager.getDetailsFromDict(Campaign_Code){
+        if let data = AppConfig.Campaign_Code.obtainData(){
             return data
         }
         //default value
@@ -246,7 +246,7 @@ class RateDataManager {
     }
     
     static func askForRateEveryVersion() -> Bool{
-        if let data = dataManager.getDetailsFromDict(AskRateInEveryVersion){
+        if let data = RateConfig.AskRateInEveryVersion.obtainData(){
             return data == "false" ? false : true
         }
         //default value
@@ -254,7 +254,7 @@ class RateDataManager {
     }
     
     static func getAppName() -> String{
-        if let data = dataManager.getDetailsFromDict(AppName){
+        if let data = AppConfig.AppName.obtainData(){
             return data
         }
         //default value
@@ -262,14 +262,14 @@ class RateDataManager {
     }
     
     static func getAppStoreUrl() -> String{
-        if let data = dataManager.getDetailsFromDict(App_Store_URL){
+        if let data = RateConfig.App_Store_URL.obtainData(){
             return data.stringByReplacingOccurrencesOfString("APP_ID", withString: getAppID(), options: NSStringCompareOptions.LiteralSearch, range: nil)
         }
         //default value
         return "itms-apps://itunes.apple.com/app/id\(getAppID())"
     }
     static func getAppStoreRateUrl() -> String{
-        if let data = dataManager.getDetailsFromDict(App_Store_Rate_URL){
+        if let data = RateConfig.App_Store_Rate_URL.obtainData(){
             return data.stringByReplacingOccurrencesOfString("APP_ID", withString: getAppID(), options: NSStringCompareOptions.LiteralSearch, range: nil)
         }
         //default value
@@ -287,21 +287,6 @@ class RateDataManager {
     private static let Times_Opened_From_Notification = "Times_Opened_From_Notification"
     private static let Times_Opened_DataView = "Times_Opened_DataView"
     
-    //Config File
-    private static let Reminder_Delay_In_Days = "Reminder_Delay_In_Days"
-    private static let Reminder_Delay_In_Times_App_Opened = "Reminder_Delay_In_Times_App_Opened"
-    private static let App_ID = "App_ID"
-    private static let Affiliate_Code = "Affiliate_Code"
-    private static let Campaign_Code = "Campaign_Code"
-    private static let App_Store_Rate_URL = "App_Store_Rate_URL"
-    private static let App_Store_URL = "App_Store_URL"
-    private static let AppName = "AppName"
-    
-    private static let AskRateInEveryVersion = "AskRateInEveryVersion"
-    
-    private static let Reminder_Delay_In_Open_Notification = "Reminder_Delay_In_Open_Notification"
-    private static let Reminder_Delay_In_Open_DataView = "Reminder_Delay_In_Open_DataView"
-    
-   
+     
     
 }
