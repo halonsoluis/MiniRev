@@ -11,10 +11,10 @@ import Foundation
 enum DelayConfig: String {
     case
     //Config File
-    Reminder_Delay_In_Days = "Reminder_Delay_In_Days",
-    Reminder_Delay_In_Times_App_Opened = "Reminder_Delay_In_Times_App_Opened",
-    Reminder_Delay_In_Open_Notification = "Reminder_Delay_In_Open_Notification",
-    Reminder_Delay_In_Open_DataView = "Reminder_Delay_In_Open_DataView"
+    Delay_In_Days = "Delay_In_Days",
+    Delay_In_Times_App_Tried_To_Show_Rev = "Delay_In_Times_App_Tried_To_Show_Rev",
+    Delay_In_Criteria_A = "Delay_In_Criteria_A",
+    Delay_In_Criteria_B = "Delay_In_Criteria_B"
     
     private static let configFile = "DelayConfig"
     

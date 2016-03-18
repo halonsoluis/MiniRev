@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-            RateHandler.userHasOpenedDataView()
+           //
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rateAction(sender: AnyObject) {
+        RateHandler.userHasFulfilledCriteria_A()
         RateHandler.presentRateDialog(self)
     }
 }

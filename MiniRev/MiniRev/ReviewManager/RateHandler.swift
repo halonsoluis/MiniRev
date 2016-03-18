@@ -61,11 +61,11 @@ public class RateHandler {
         }
     }
     
-    public static func appHasBeingOpenedFromNotification() {
-        RateDataManager.appHasBeingOpenedFromNotification()
+    public static func userHasFulfilledCriteria_A() {
+        RateDataManager.userHasFulfilledCriteria_A()
     }
-    public static func userHasOpenedDataView() {
-        RateDataManager.userHasOpenedDataView()
+    public static func userHasFulfilledCriteria_B() {
+        RateDataManager.userHasFulfilledCriteria_B()
     }
     
 }

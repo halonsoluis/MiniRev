@@ -2,13 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Reminder_Delay_In_Days</key>
+	<key>Delay_In_Days</key>
 	<string>-1</string>
-	<key>Reminder_Delay_In_Open_Notification</key>
-	<string>-1</string>
-	<key>Reminder_Delay_In_Open_DataView</key>
+	<key>Delay_In_Criteria_A</key>
 	<string>2</string>
-	<key>Reminder_Delay_In_Times_App_Opened</key>
+	<key>Delay_In_Criteria_B</key>
+	<string>-1</string>
+	<key>Delay_In_Times_App_Tried_To_Show_Rev</key>
 	<string>-1</string>
 </dict>
 </plist>
