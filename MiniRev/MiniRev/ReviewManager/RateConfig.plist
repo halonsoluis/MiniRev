@@ -2,27 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Reminder_Delay_In_Open_Notification</key>
-	<string>-1</string>
-	<key>Reminder_Delay_In_Open_DataView</key>
-	<string>1</string>
-	<key>ShowInCustomRateDialog</key>
-	<string>true</string>
-	<key>AskRateInEveryVersion</key>
-	<string>true</string>
-	<key>App_Store_Rate_URL</key>
-	<string>itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?pageNumber=0&amp;sortOrdering=1&amp;type=Purple+Software&amp;mt=8&amp;id=APP_ID</string>
-	<key>App_Store_URL</key>
-	<string>itms-apps://itunes.apple.com/app/idAPP_ID?mt=8&amp;ls=1</string>
-	<key>Reminder_Delay_In_Days</key>
-	<string>-1</string>
-	<key>Reminder_Delay_In_Times_App_Opened</key>
-	<string>-1</string>
 	<key>App_ID</key>
 	<string>000000000</string>
 	<key>Affiliate_Code</key>
 	<string></string>
 	<key>Campaign_Code</key>
 	<string></string>
+	<key> </key>
+	<string></string>
+	<key>Reminder_Delay_In_Open_Notification</key>
+	<string>-1</string>
+	<key>Reminder_Delay_In_Open_DataView</key>
+	<string>1</string>
+	<key>Reminder_Delay_In_Days</key>
+	<string>-1</string>
+	<key>Reminder_Delay_In_Times_App_Opened</key>
+	<string>-1</string>
+	<key>  </key>
+	<string></string>
+	<key>ShowInCustomRateDialog</key>
+	<string>true</string>
+	<key>AskRateInEveryVersion</key>
+	<string>true</string>
+	<key>App_Store_URL</key>
+	<string>itms-apps://itunes.apple.com/app/idAPP_ID?mt=8&amp;ls=1</string>
+	<key>App_Store_Rate_URL</key>
+	<string>itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?pageNumber=0&amp;sortOrdering=1&amp;type=Purple+Software&amp;mt=8&amp;id=APP_ID</string>
 </dict>
 </plist>

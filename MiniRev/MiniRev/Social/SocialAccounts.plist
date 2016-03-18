@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>destinationMail</key>
+	<string>hugoalonsoluis@gmail.com</string>
 	<key>faqPage</key>
 	<string>http://yourBusiness.com/faq.html</string>
 	<key>privacyPolicePage</key>
 	<string>http://yourBusiness.com/privacy.html</string>
-	<key>destinationMail</key>
-	<string>hugoalonsoluis@gmail.com</string>
 	<key>twiiter_username</key>
 	<string>yourBusinessapp</string>
 	<key>facebook_pageId</key>
