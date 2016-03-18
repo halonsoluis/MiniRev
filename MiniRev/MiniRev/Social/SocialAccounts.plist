@@ -5,14 +5,18 @@
 	<key>destinationMail</key>
 	<string>hugoalonsoluis@gmail.com</string>
 	<key>faqPage</key>
-	<string>http://yourBusiness.com/faq.html</string>
+	<string></string>
 	<key>privacyPolicePage</key>
-	<string>http://yourBusiness.com/privacy.html</string>
+	<string></string>
 	<key>twiiter_username</key>
-	<string>yourBusinessapp</string>
+	<string></string>
 	<key>facebook_pageId</key>
-	<string>000000000000000</string>
+	<string></string>
 	<key>facebook_pageName</key>
-	<string>yourBusinessapp</string>
+	<string></string>
+	<key>gPlusPageId</key>
+	<string></string>
+	<key>instagram_username</key>
+	<string></string>
 </dict>
 </plist>

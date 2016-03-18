@@ -55,4 +55,6 @@ final class DataManager: NSObject {
     static let facebook_pageName = "facebook_pageName"
     static let faqPage = "faqPage"
     static let privacyPolicePage = "privacyPolicePage"
+    static let instagram_username = "instagram_username"
+    static let gPlusPageId = "gPlusPageId"
 }
