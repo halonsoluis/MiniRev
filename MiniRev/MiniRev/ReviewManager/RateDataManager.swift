@@ -34,10 +34,14 @@ class RateDataManager {
         
         // if conditions previously met in this session then do not show the RateDialog again
         //Uncomment for having only one opportunity for session to show the dialog
-      /*  guard shouldAsk else {
+        if shouldAskMoreThanOnce() {
+            shouldAsk = true
+        }
+        
+        guard shouldAsk else {
             return false
         }
-        */
+        
         //if there is no data in the NSUserDefaults (then is the first time app has being opened), set initial data to start counting
         guard let prompt = dataManager.loadStringData(doNotShowRateDialogAnymore) else {
             dataManager.saveData(doNotShowRateDialogAnymore, object: "false")
@@ -253,6 +257,10 @@ extension RateDataManager {
         return data == "false" ? false : true
     }
     
+    static func shouldAskMoreThanOnce() -> Bool{
+        let data = RateConfig.shouldAskMoreThanOnce.obtainData()
+        return data == "false" ? false : true
+    }
     static func getAppName() -> String{
         return AppConfig.AppName.obtainData()
     }

@@ -5,7 +5,7 @@
 	<key>Delay_In_Days</key>
 	<string>-1</string>
 	<key>Delay_In_Criteria_A</key>
-	<string>2</string>
+	<string>1</string>
 	<key>Delay_In_Criteria_B</key>
 	<string>-1</string>
 	<key>Delay_In_Times_App_Tried_To_Show_Rev</key>
