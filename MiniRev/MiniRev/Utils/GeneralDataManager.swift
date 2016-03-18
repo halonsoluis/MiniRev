@@ -158,7 +158,7 @@ extension GeneralDataManager {
      
      - returns: the dictionary extracted from the bundle
      */
-    private static func locatePlistFile(fileName: String, bundle: NSBundle? = NSBundle.mainBundle()) -> NSDictionary? {
+    static func locatePlistFile(fileName: String, bundle: NSBundle? = NSBundle.mainBundle()) -> NSDictionary? {
         guard let bundle = bundle else {
             return nil
         }

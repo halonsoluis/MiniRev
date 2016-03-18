@@ -26,7 +26,7 @@ class RateFlowViewController: UIViewController {
         }
         removeReview() {
         
-        let receipt = DataManager.getEmailReceipt()
+        let receipt = SocialAccounts.getEmailReceipt()
         let receipts = [receipt]
         let subject = NSLocalizedString(SubjectOptions.WhatIDontLike.rawValue, comment: "Subject")
         let mail = MailHandler(receipts: receipts, subject: subject, messageBody: "")

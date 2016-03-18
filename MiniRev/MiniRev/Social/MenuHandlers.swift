@@ -53,7 +53,7 @@ enum MenuSocialHandlers {
     }
     
     static func sendMail(parentViewController: UIViewController) {
-        let receipt = DataManager.getEmailReceipt()
+        let receipt = SocialAccounts.getEmailReceipt()
         let receipts = [receipt]
         
         requestMailSubject(parentViewController) { subject in

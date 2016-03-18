@@ -36,43 +36,42 @@ enum NetworkLinker {
     case Facebook, Twitter, GooglePlus, Instagram, FAQPage, PrivacyPolicePage
     
     private func url() -> NetworkUrl {
-        let socialAccounts = DataManager.socialAccountsData
         var scheme:String?
         var page:String = ""
         
         switch self {
         case .Facebook:
-            if let faceBookPageId = socialAccounts[DataManager.facebook_pageId],
-               let faceBookPageName = socialAccounts[DataManager.facebook_pageName]{
+            if let faceBookPageId = SocialAccounts.facebook_pageId.obtainData(),
+               let faceBookPageName = SocialAccounts.facebook_pageName.obtainData(){
                
                 scheme = "fb://profile/\(faceBookPageId)"
                 page = "https://www.facebook.com/\(faceBookPageName)"
             }
             
         case .Twitter:
-            if let twitterUser = socialAccounts[DataManager.twitter_username]{
+            if let twitterUser = SocialAccounts.twitter_username.obtainData(){
                 scheme = "twitter://user?screen_name=\(twitterUser)"
                 page = "https://twitter.com/\(twitterUser)"
             }
             
         case .GooglePlus:
-            if let PageId = socialAccounts[DataManager.gPlusPageId]{
+            if let PageId = SocialAccounts.gPlusPageId.obtainData(){
                 scheme = "gplus://plus.google.com/u/0/\(PageId)"
                 page = "https://plus.google.com/\(PageId)"
             }
         case .Instagram:
-                if let instagramUser = socialAccounts[DataManager.instagram_username]{
+                if let instagramUser = SocialAccounts.instagram_username.obtainData(){
                     scheme = "instagram://user?username=\(instagramUser)"
                     page = "https://www.instagram.com/\(instagramUser)"
                 }
             
         case .FAQPage:
-            if let faqPage = socialAccounts[DataManager.faqPage]{
+            if let faqPage = SocialAccounts.faqPage.obtainData(){
                 page = faqPage
             }
             
         case .PrivacyPolicePage:
-            if let privacyPolicePage = socialAccounts[DataManager.privacyPolicePage] {
+            if let privacyPolicePage = SocialAccounts.privacyPolicePage.obtainData(){
                 page = privacyPolicePage
             }
         }
