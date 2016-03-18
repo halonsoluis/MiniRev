@@ -13,7 +13,8 @@ enum RateConfig: String {
     App_Store_Rate_URL = "App_Store_Rate_URL",
     App_Store_URL = "App_Store_URL",
     AskRateInEveryVersion = "AskRateInEveryVersion",
-    debugMode = "debugMode"
+    debugMode = "debugMode",
+    shouldAskMoreThanOnce = "shouldAskMoreThanOnce"
     
     private static let configFile = "RateConfig"
     static let data = DataManager(configFile: configFile).data
