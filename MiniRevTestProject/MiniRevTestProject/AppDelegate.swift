@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  TestMiniRev
+//  MiniRevTestProject
 //
-//  Created by Hugo on 3/17/16.
-//  Copyright © 2016 halonso. All rights reserved.
+//  Created by Hugo Alonso on 3/17/16.
+//  Copyright © 2016 Hugo Alonso. All rights reserved.
 //
 
 import UIKit

@@ -1,16 +1,16 @@
 //
 //  ViewController.swift
-//  MiniRevTest
+//  MiniRevTestProject
 //
-//  Created by Hugo on 3/17/16.
-//  Copyright © 2016 halonso. All rights reserved.
+//  Created by Hugo Alonso on 3/17/16.
+//  Copyright © 2016 Hugo Alonso. All rights reserved.
 //
 
 import UIKit
 import MiniRev
 
 class ViewController: UIViewController {
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        RateHandler.userHasOpenedDataView()
+           //
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -26,8 +26,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rateAction(sender: AnyObject) {
+        RateHandler.userHasFulfilledCriteria_A()
         RateHandler.presentRateDialog(self)
     }
-    
 }
 

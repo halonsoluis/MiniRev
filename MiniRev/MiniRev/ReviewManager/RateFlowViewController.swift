@@ -14,6 +14,11 @@ class RateFlowViewController: UIViewController {
     @IBOutlet weak var firstPageTitle: UILabel!
     @IBOutlet weak var giveAReviewTitle: UILabel!
     @IBOutlet weak var sendMailTitle: UILabel!
+    @IBOutlet weak var appNamed: UILabel!
+    
+    override func viewDidLoad() {
+        appNamed?.text = RateDataManager.getAppName()
+    }
   
     @IBAction func prepareForFeedBack(sender: AnyObject) {
         guard let parentViewController = self.parentViewController?.parentViewController else {
@@ -21,7 +26,7 @@ class RateFlowViewController: UIViewController {
         }
         removeReview() {
         
-        let receipt = DataManager.getEmailReceipt()
+        let receipt = SocialAccounts.getEmailReceipt()
         let receipts = [receipt]
         let subject = NSLocalizedString(SubjectOptions.WhatIDontLike.rawValue, comment: "Subject")
         let mail = MailHandler(receipts: receipts, subject: subject, messageBody: "")

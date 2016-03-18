@@ -4,19 +4,11 @@
 <dict>
 	<key>destinationMail</key>
 	<string>hugoalonsoluis@gmail.com</string>
-	<key>faqPage</key>
-	<string></string>
-	<key>privacyPolicePage</key>
-	<string></string>
 	<key>twiiter_username</key>
 	<string></string>
 	<key>facebook_pageId</key>
 	<string></string>
 	<key>facebook_pageName</key>
-	<string></string>
-	<key>gPlusPageId</key>
-	<string></string>
-	<key>instagram_username</key>
 	<string></string>
 </dict>
 </plist>

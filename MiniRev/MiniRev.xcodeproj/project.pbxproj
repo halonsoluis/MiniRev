@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A234F971C933112000C6125 /* ReviewFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A234F7B1C933112000C6125 /* ReviewFlow.storyboard */; };
 		9A234F981C933112000C6125 /* ReviewFlow.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A234F7D1C933112000C6125 /* ReviewFlow.strings */; };
-		9A234F991C933112000C6125 /* RateConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A234F801C933112000C6125 /* RateConfig.plist */; };
+		9A234F991C933112000C6125 /* AppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A234F801C933112000C6125 /* AppConfig.plist */; };
 		9A234F9A1C933112000C6125 /* RateDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234F811C933112000C6125 /* RateDataManager.swift */; };
 		9A234F9B1C933112000C6125 /* RateFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234F821C933112000C6125 /* RateFlowViewController.swift */; };
 		9A234F9C1C933112000C6125 /* RateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A234F831C933112000C6125 /* RateHandler.swift */; };
@@ -28,6 +28,12 @@
 		9A7E6D0B1C9224D4007FF2F4 /* MiniRev.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7E6D0A1C9224D4007FF2F4 /* MiniRev.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A7E6D121C9224D4007FF2F4 /* MiniRev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7E6D071C9224D4007FF2F4 /* MiniRev.framework */; };
 		9A7E6D171C9224D4007FF2F4 /* MiniRevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E6D161C9224D4007FF2F4 /* MiniRevTests.swift */; };
+		9ADBCA5A1C9BD4DA00EC2B44 /* RateConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ADBCA591C9BD4DA00EC2B44 /* RateConfig.plist */; };
+		9ADBCA5C1C9BD61D00EC2B44 /* DelayConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ADBCA5B1C9BD61D00EC2B44 /* DelayConfig.plist */; };
+		9ADBCA671C9BDBC700EC2B44 /* SocialAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBCA661C9BDBC700EC2B44 /* SocialAccount.swift */; };
+		9ADBCA6A1C9BE2AE00EC2B44 /* DelayConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBCA691C9BE2AE00EC2B44 /* DelayConfig.swift */; };
+		9ADBCA6C1C9BE2BA00EC2B44 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBCA6B1C9BE2BA00EC2B44 /* AppConfig.swift */; };
+		9ADBCA6E1C9BE2C900EC2B44 /* RateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBCA6D1C9BE2C900EC2B44 /* RateConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +50,7 @@
 		9A234F7C1C933112000C6125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ReviewFlow.storyboard; sourceTree = "<group>"; };
 		9A234F7E1C933112000C6125 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ReviewFlow.strings; sourceTree = "<group>"; };
 		9A234F7F1C933112000C6125 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ReviewFlow.strings; sourceTree = "<group>"; };
-		9A234F801C933112000C6125 /* RateConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = RateConfig.plist; path = ReviewManager/RateConfig.plist; sourceTree = "<group>"; };
+		9A234F801C933112000C6125 /* AppConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppConfig.plist; path = ReviewManager/AppConfig.plist; sourceTree = "<group>"; };
 		9A234F811C933112000C6125 /* RateDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateDataManager.swift; sourceTree = "<group>"; };
 		9A234F821C933112000C6125 /* RateFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateFlowViewController.swift; sourceTree = "<group>"; };
 		9A234F831C933112000C6125 /* RateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateHandler.swift; sourceTree = "<group>"; };
@@ -53,7 +59,7 @@
 		9A234FAF1C9332F0000C6125 /* MenuHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHandlers.swift; sourceTree = "<group>"; };
 		9A234FB01C9332F0000C6125 /* NetworkLinker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLinker.swift; sourceTree = "<group>"; };
 		9A234FB11C9332F0000C6125 /* SocialAccounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SocialAccounts.plist; path = Social/SocialAccounts.plist; sourceTree = "<group>"; };
-		9A234FB31C9332F0000C6125 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9A234FB31C9332F0000C6125 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../Utils/DataManager.swift; sourceTree = "<group>"; };
 		9A234FB41C9332F0000C6125 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		9A234FB51C9332F0000C6125 /* GeneralDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralDataManager.swift; sourceTree = "<group>"; };
 		9A234FB61C9332F0000C6125 /* iDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iDevice.swift; sourceTree = "<group>"; };
@@ -66,6 +72,12 @@
 		9A7E6D111C9224D4007FF2F4 /* MiniRevTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniRevTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7E6D161C9224D4007FF2F4 /* MiniRevTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniRevTests.swift; sourceTree = "<group>"; };
 		9A7E6D181C9224D4007FF2F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ADBCA591C9BD4DA00EC2B44 /* RateConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RateConfig.plist; sourceTree = "<group>"; };
+		9ADBCA5B1C9BD61D00EC2B44 /* DelayConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DelayConfig.plist; sourceTree = "<group>"; };
+		9ADBCA661C9BDBC700EC2B44 /* SocialAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialAccount.swift; sourceTree = "<group>"; };
+		9ADBCA691C9BE2AE00EC2B44 /* DelayConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayConfig.swift; sourceTree = "<group>"; };
+		9ADBCA6B1C9BE2BA00EC2B44 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		9ADBCA6D1C9BE2C900EC2B44 /* RateConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,7 @@
 				9A234FAE1C9332F0000C6125 /* MailHandler.swift */,
 				9A234FAF1C9332F0000C6125 /* MenuHandlers.swift */,
 				9A234FB01C9332F0000C6125 /* NetworkLinker.swift */,
+				9A234FB31C9332F0000C6125 /* DataManager.swift */,
 			);
 			path = Social;
 			sourceTree = "<group>";
@@ -113,9 +126,8 @@
 		9A234FB21C9332F0000C6125 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9A234FB31C9332F0000C6125 /* DataManager.swift */,
-				9A234FB41C9332F0000C6125 /* DateExtensions.swift */,
 				9A234FB51C9332F0000C6125 /* GeneralDataManager.swift */,
+				9A234FB41C9332F0000C6125 /* DateExtensions.swift */,
 				9A234FB61C9332F0000C6125 /* iDevice.swift */,
 				9A234FB71C9332F0000C6125 /* Reachability.swift */,
 				9A234FB81C9332F0000C6125 /* Threading.swift */,
@@ -167,10 +179,40 @@
 		9AA6A1DB1C9754FE005B9C6D /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				9A234FB11C9332F0000C6125 /* SocialAccounts.plist */,
-				9A234F801C933112000C6125 /* RateConfig.plist */,
+				9ADBCA651C9BD88C00EC2B44 /* AppSpecific */,
+				9ADBCA641C9BD88200EC2B44 /* internal */,
+				9ADBCA681C9BE28D00EC2B44 /* DataAccessors */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		9ADBCA641C9BD88200EC2B44 /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				9ADBCA591C9BD4DA00EC2B44 /* RateConfig.plist */,
+			);
+			name = internal;
+			sourceTree = "<group>";
+		};
+		9ADBCA651C9BD88C00EC2B44 /* AppSpecific */ = {
+			isa = PBXGroup;
+			children = (
+				9A234FB11C9332F0000C6125 /* SocialAccounts.plist */,
+				9A234F801C933112000C6125 /* AppConfig.plist */,
+				9ADBCA5B1C9BD61D00EC2B44 /* DelayConfig.plist */,
+			);
+			name = AppSpecific;
+			sourceTree = "<group>";
+		};
+		9ADBCA681C9BE28D00EC2B44 /* DataAccessors */ = {
+			isa = PBXGroup;
+			children = (
+				9ADBCA661C9BDBC700EC2B44 /* SocialAccount.swift */,
+				9ADBCA691C9BE2AE00EC2B44 /* DelayConfig.swift */,
+				9ADBCA6B1C9BE2BA00EC2B44 /* AppConfig.swift */,
+				9ADBCA6D1C9BE2C900EC2B44 /* RateConfig.swift */,
+			);
+			name = DataAccessors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +277,7 @@
 				TargetAttributes = {
 					9A7E6D061C9224D4007FF2F4 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = RU5U8BC26T;
 					};
 					9A7E6D101C9224D4007FF2F4 = {
 						CreatedOnToolsVersion = 7.2;
@@ -266,9 +309,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ADBCA5C1C9BD61D00EC2B44 /* DelayConfig.plist in Resources */,
 				9A234F981C933112000C6125 /* ReviewFlow.strings in Resources */,
 				9A234FBD1C9332F0000C6125 /* SocialAccounts.plist in Resources */,
-				9A234F991C933112000C6125 /* RateConfig.plist in Resources */,
+				9ADBCA5A1C9BD4DA00EC2B44 /* RateConfig.plist in Resources */,
+				9A234F991C933112000C6125 /* AppConfig.plist in Resources */,
 				9A234F971C933112000C6125 /* ReviewFlow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A234F9B1C933112000C6125 /* RateFlowViewController.swift in Sources */,
+				9ADBCA6A1C9BE2AE00EC2B44 /* DelayConfig.swift in Sources */,
 				9A234FC11C9332F0000C6125 /* iDevice.swift in Sources */,
 				9A234FC21C9332F0000C6125 /* Reachability.swift in Sources */,
 				9A234FBE1C9332F0000C6125 /* DataManager.swift in Sources */,
@@ -296,11 +342,14 @@
 				9A234FC31C9332F0000C6125 /* Threading.swift in Sources */,
 				9A234F9A1C933112000C6125 /* RateDataManager.swift in Sources */,
 				9A234FBC1C9332F0000C6125 /* NetworkLinker.swift in Sources */,
+				9ADBCA6C1C9BE2BA00EC2B44 /* AppConfig.swift in Sources */,
 				9A234FBF1C9332F0000C6125 /* DateExtensions.swift in Sources */,
 				9A234FBB1C9332F0000C6125 /* MenuHandlers.swift in Sources */,
 				9A234F9C1C933112000C6125 /* RateHandler.swift in Sources */,
+				9ADBCA671C9BDBC700EC2B44 /* SocialAccount.swift in Sources */,
 				9A234FC01C9332F0000C6125 /* GeneralDataManager.swift in Sources */,
 				9A234FBA1C9332F0000C6125 /* MailHandler.swift in Sources */,
+				9ADBCA6E1C9BE2C900EC2B44 /* RateConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +484,8 @@
 		9A7E6D1C1C9224D4007FF2F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -444,6 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = halonso.MiniRev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -451,6 +503,8 @@
 		9A7E6D1D1C9224D4007FF2F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -460,6 +514,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = halonso.MiniRev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

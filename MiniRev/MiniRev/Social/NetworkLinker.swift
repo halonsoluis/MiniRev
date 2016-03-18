@@ -33,46 +33,52 @@ struct NetworkUrl {
 }
 
 enum NetworkLinker {
-    case Facebook, Twitter, /*GooglePlus, Instagram,*/ FAQPage, PrivacyPolicePage
+    case Facebook, Twitter, GooglePlus, Instagram, FAQPage, PrivacyPolicePage
     
     private func url() -> NetworkUrl {
-        let socialAccounts = DataManager.socialAccountsData
         var scheme:String?
         var page:String = ""
         
         switch self {
         case .Facebook:
-            if let faceBookPageId = socialAccounts[DataManager.facebook_pageId],
-               let faceBookPageName = socialAccounts[DataManager.facebook_pageName]{
+            let faceBookPageId = SocialAccounts.facebook_pageId.obtainData()
+            let faceBookPageName = SocialAccounts.facebook_pageName.obtainData()
+            
+            if faceBookPageId.characters.count > 0 && faceBookPageName.characters.count > 0{
                
                 scheme = "fb://profile/\(faceBookPageId)"
                 page = "https://www.facebook.com/\(faceBookPageName)"
             }
             
         case .Twitter:
-            if let twitterUser = socialAccounts[DataManager.twitter_username]{
+            let twitterUser = SocialAccounts.twitter_username.obtainData()
+            if twitterUser.characters.count > 0 {
                 scheme = "twitter://user?screen_name=\(twitterUser)"
                 page = "https://twitter.com/\(twitterUser)"
             }
-            /*
+            
         case .GooglePlus:
-            if let PageId = socialAccounts[DataManager.facebook_pageId]{
+            let PageId = SocialAccounts.gPlusPageId.obtainData()
+            if PageId.characters.count > 0 {
                 scheme = "gplus://plus.google.com/u/0/\(PageId)"
                 page = "https://plus.google.com/\(PageId)"
             }
         case .Instagram:
-                if let instagramUser = socialAccounts[DataManager.twitter_username]{
+            let instagramUser = SocialAccounts.instagram_username.obtainData()
+                if instagramUser.characters.count > 0 {
                     scheme = "instagram://user?username=\(instagramUser)"
                     page = "https://www.instagram.com/\(instagramUser)"
                 }
-            */
+            
         case .FAQPage:
-            if let faqPage = socialAccounts[DataManager.faqPage]{
+            let faqPage = SocialAccounts.faqPage.obtainData()
+            if faqPage.characters.count > 0 {
                 page = faqPage
             }
             
         case .PrivacyPolicePage:
-            if let privacyPolicePage = socialAccounts[DataManager.privacyPolicePage] {
+            let privacyPolicePage = SocialAccounts.privacyPolicePage.obtainData()
+            if privacyPolicePage.characters.count > 0 {
                 page = privacyPolicePage
             }
         }
