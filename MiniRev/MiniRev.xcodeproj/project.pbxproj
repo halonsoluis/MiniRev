@@ -53,7 +53,7 @@
 		9A234FAF1C9332F0000C6125 /* MenuHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHandlers.swift; sourceTree = "<group>"; };
 		9A234FB01C9332F0000C6125 /* NetworkLinker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLinker.swift; sourceTree = "<group>"; };
 		9A234FB11C9332F0000C6125 /* SocialAccounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SocialAccounts.plist; path = Social/SocialAccounts.plist; sourceTree = "<group>"; };
-		9A234FB31C9332F0000C6125 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9A234FB31C9332F0000C6125 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../Utils/DataManager.swift; sourceTree = "<group>"; };
 		9A234FB41C9332F0000C6125 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		9A234FB51C9332F0000C6125 /* GeneralDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralDataManager.swift; sourceTree = "<group>"; };
 		9A234FB61C9332F0000C6125 /* iDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iDevice.swift; sourceTree = "<group>"; };
@@ -106,6 +106,7 @@
 				9A234FAE1C9332F0000C6125 /* MailHandler.swift */,
 				9A234FAF1C9332F0000C6125 /* MenuHandlers.swift */,
 				9A234FB01C9332F0000C6125 /* NetworkLinker.swift */,
+				9A234FB31C9332F0000C6125 /* DataManager.swift */,
 			);
 			path = Social;
 			sourceTree = "<group>";
@@ -113,7 +114,6 @@
 		9A234FB21C9332F0000C6125 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9A234FB31C9332F0000C6125 /* DataManager.swift */,
 				9A234FB41C9332F0000C6125 /* DateExtensions.swift */,
 				9A234FB51C9332F0000C6125 /* GeneralDataManager.swift */,
 				9A234FB61C9332F0000C6125 /* iDevice.swift */,

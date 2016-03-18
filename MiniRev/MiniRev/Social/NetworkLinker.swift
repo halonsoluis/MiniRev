@@ -33,7 +33,7 @@ struct NetworkUrl {
 }
 
 enum NetworkLinker {
-    case Facebook, Twitter, /*GooglePlus, Instagram,*/ FAQPage, PrivacyPolicePage
+    case Facebook, Twitter, GooglePlus, Instagram, FAQPage, PrivacyPolicePage
     
     private func url() -> NetworkUrl {
         let socialAccounts = DataManager.socialAccountsData
@@ -54,18 +54,18 @@ enum NetworkLinker {
                 scheme = "twitter://user?screen_name=\(twitterUser)"
                 page = "https://twitter.com/\(twitterUser)"
             }
-            /*
+            
         case .GooglePlus:
-            if let PageId = socialAccounts[DataManager.facebook_pageId]{
+            if let PageId = socialAccounts[DataManager.gPlusPageId]{
                 scheme = "gplus://plus.google.com/u/0/\(PageId)"
                 page = "https://plus.google.com/\(PageId)"
             }
         case .Instagram:
-                if let instagramUser = socialAccounts[DataManager.twitter_username]{
+                if let instagramUser = socialAccounts[DataManager.instagram_username]{
                     scheme = "instagram://user?username=\(instagramUser)"
                     page = "https://www.instagram.com/\(instagramUser)"
                 }
-            */
+            
         case .FAQPage:
             if let faqPage = socialAccounts[DataManager.faqPage]{
                 page = faqPage
