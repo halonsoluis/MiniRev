@@ -17,7 +17,7 @@ class RateFlowViewController: UIViewController {
     @IBOutlet weak var appNamed: UILabel!
     
     override func viewDidLoad() {
-        appNamed?.text = "your app name"
+        appNamed?.text = RateDataManager.getAppName()
     }
   
     @IBAction func prepareForFeedBack(sender: AnyObject) {

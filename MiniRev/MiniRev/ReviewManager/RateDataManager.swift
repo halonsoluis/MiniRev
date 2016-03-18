@@ -253,6 +253,14 @@ class RateDataManager {
         return true
     }
     
+    static func getAppName() -> String{
+        if let data = dataManager.getDetailsFromDict(AppName){
+            return data
+        }
+        //default value
+        return "No Name Set"
+    }
+    
     static func getAppStoreUrl() -> String{
         if let data = dataManager.getDetailsFromDict(App_Store_URL){
             return data.stringByReplacingOccurrencesOfString("APP_ID", withString: getAppID(), options: NSStringCompareOptions.LiteralSearch, range: nil)
@@ -287,6 +295,8 @@ class RateDataManager {
     private static let Campaign_Code = "Campaign_Code"
     private static let App_Store_Rate_URL = "App_Store_Rate_URL"
     private static let App_Store_URL = "App_Store_URL"
+    private static let AppName = "AppName"
+    
     private static let AskRateInEveryVersion = "AskRateInEveryVersion"
     
     private static let Reminder_Delay_In_Open_Notification = "Reminder_Delay_In_Open_Notification"
