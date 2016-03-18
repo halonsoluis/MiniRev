@@ -3,12 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>AppName</key>
-	<string>NO NAME</string>
+	<string>MiniRev</string>
 	<key>App_ID</key>
-	<string></string>
-	<key>Affiliate_Code</key>
-	<string></string>
-	<key>Campaign_Code</key>
 	<string></string>
 </dict>
 </plist>

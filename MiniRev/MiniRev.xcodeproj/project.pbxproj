@@ -28,6 +28,8 @@
 		9A7E6D0B1C9224D4007FF2F4 /* MiniRev.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7E6D0A1C9224D4007FF2F4 /* MiniRev.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A7E6D121C9224D4007FF2F4 /* MiniRev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7E6D071C9224D4007FF2F4 /* MiniRev.framework */; };
 		9A7E6D171C9224D4007FF2F4 /* MiniRevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E6D161C9224D4007FF2F4 /* MiniRevTests.swift */; };
+		9ADBCA5A1C9BD4DA00EC2B44 /* RateRoutes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ADBCA591C9BD4DA00EC2B44 /* RateRoutes.plist */; };
+		9ADBCA5C1C9BD61D00EC2B44 /* DelayConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ADBCA5B1C9BD61D00EC2B44 /* DelayConfig.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		9A7E6D111C9224D4007FF2F4 /* MiniRevTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniRevTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7E6D161C9224D4007FF2F4 /* MiniRevTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniRevTests.swift; sourceTree = "<group>"; };
 		9A7E6D181C9224D4007FF2F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ADBCA591C9BD4DA00EC2B44 /* RateRoutes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RateRoutes.plist; sourceTree = "<group>"; };
+		9ADBCA5B1C9BD61D00EC2B44 /* DelayConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DelayConfig.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 			children = (
 				9A234FB11C9332F0000C6125 /* SocialAccounts.plist */,
 				9A234F801C933112000C6125 /* RateConfig.plist */,
+				9ADBCA5B1C9BD61D00EC2B44 /* DelayConfig.plist */,
+				9ADBCA591C9BD4DA00EC2B44 /* RateRoutes.plist */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -267,8 +273,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ADBCA5C1C9BD61D00EC2B44 /* DelayConfig.plist in Resources */,
 				9A234F981C933112000C6125 /* ReviewFlow.strings in Resources */,
 				9A234FBD1C9332F0000C6125 /* SocialAccounts.plist in Resources */,
+				9ADBCA5A1C9BD4DA00EC2B44 /* RateRoutes.plist in Resources */,
 				9A234F991C933112000C6125 /* RateConfig.plist in Resources */,
 				9A234F971C933112000C6125 /* ReviewFlow.storyboard in Resources */,
 			);
