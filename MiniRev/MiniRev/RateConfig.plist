@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>debugMode</key>
-	<string>false</string>
+	<string>true</string>
 	<key>AskRateInEveryVersion</key>
 	<string>true</string>
 	<key>App_Store_URL</key>
