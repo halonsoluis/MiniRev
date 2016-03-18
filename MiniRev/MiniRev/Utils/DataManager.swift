@@ -25,7 +25,9 @@ final class DataManager: NSObject {
     }
     private static var _socialAccountsData : [String:String] = {
         // Read from the Configuration plist the data.
-        guard let path = NSBundle(forClass: DataManager.self).pathForResource("SocialAccounts", ofType: "plist"), let dict = NSDictionary(contentsOfFile: path) else {
+        let dataManager = GeneralDataManager.buildDataManager(plistConfigFileName: "SocialAccounts")
+        
+        guard let dict = dataManager.myDict else {
             return [:]
         }
         return dict as! [String : String]

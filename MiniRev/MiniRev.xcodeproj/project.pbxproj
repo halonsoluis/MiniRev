@@ -114,8 +114,8 @@
 		9A234FB21C9332F0000C6125 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9A234FB41C9332F0000C6125 /* DateExtensions.swift */,
 				9A234FB51C9332F0000C6125 /* GeneralDataManager.swift */,
+				9A234FB41C9332F0000C6125 /* DateExtensions.swift */,
 				9A234FB61C9332F0000C6125 /* iDevice.swift */,
 				9A234FB71C9332F0000C6125 /* Reachability.swift */,
 				9A234FB81C9332F0000C6125 /* Threading.swift */,
