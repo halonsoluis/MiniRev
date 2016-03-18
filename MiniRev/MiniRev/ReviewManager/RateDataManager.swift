@@ -33,14 +33,13 @@ class RateDataManager {
         }
         
         // if conditions previously met in this session then do not show the RateDialog again
-        //Uncomment for having only one opportunity for session to show the dialog
-        if shouldAskMoreThanOnce() {
-            shouldAsk = true
+        if !shouldAskMoreThanOnce() {
+            guard shouldAsk else {
+                return false
+            }
         }
         
-        guard shouldAsk else {
-            return false
-        }
+        
         
         //if there is no data in the NSUserDefaults (then is the first time app has being opened), set initial data to start counting
         guard let prompt = dataManager.loadStringData(doNotShowRateDialogAnymore) else {
